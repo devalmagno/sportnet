@@ -34,6 +34,18 @@
         "projectId": "0ef59fc6-4bea-452b-9c4a-904b4fbdaa7d"
       }
     },
-    "owner": "devalmagno"
+    "owner": "devalmagno",
+    "plugins": [
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access camera."
+        },
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ]
+    ]
   }
 }

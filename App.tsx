@@ -5,6 +5,8 @@ import * as SplashScreen from 'expo-splash-screen';
 import * as WebBrowser from 'expo-web-browser';
 import * as Google from 'expo-auth-session/providers/google';
 
+import Home from './src/screens/Home';
+
 interface UserInfoInterface {
   name: string;
 }
@@ -67,18 +69,7 @@ export default function App() {
       onLayout={onLayoutRootView}
       style={styles.container}
     >
-      {userInfo === null ? (
-        <Button
-          color={"#000"}
-          title='Sign in with Google'
-          disabled={!request}
-          onPress={() => {
-            promptAsync();
-          }}
-        />
-      ) : (
-        <Text>{userInfo.name}</Text>
-      )}
+      <Home />
     </View>
   );
 }
